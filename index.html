@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ mobileMenu: false }" class="scroll-smooth" data-aos-easing="ease-out-cubic" data-aos-duration="1000">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arafattelecom - Download App</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      AOS.init();
+    });
+  </script>
+  <style>
+  
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+
+  <header class="bg-white shadow sticky top-0 z-50" data-aos="fade-down">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="text-2xl font-bold text-gray-800">Arafattelecom</div>
+      
+      <nav class="hidden md:flex space-x-8">
+        <a href="#download" class="text-gray-600 hover:text-blue-600 transition-colors">Download</a>
+        <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
+        <a href="#install" class="text-gray-600 hover:text-blue-600 transition-colors">Installation</a>
+        <a href="#screenshots" class="text-gray-600 hover:text-blue-600 transition-colors">Screenshots</a>
+        <a href="#comments" class="text-gray-600 hover:text-blue-600 transition-colors">Comments</a>
+      </nav>
+      
+      <button @click="mobileMenu = !mobileMenu" class="md:hidden text-gray-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path x-show="!mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          <path x-show="mobileMenu" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+    
+    <nav x-show="mobileMenu" 
+         x-transition:enter="transition transform duration-300"
+         x-transition:enter-start="opacity-0 scale-95"
+         x-transition:enter-end="opacity-100 scale-100"
+         x-transition:leave="transition transform duration-300"
+         x-transition:leave-start="opacity-100 scale-100"
+         x-transition:leave-end="opacity-0 scale-95"
+         class="md:hidden bg-white shadow-inner absolute top-full left-0 w-full">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#download" class="block text-gray-600 hover:text-blue-600 transition-colors" @click="mobileMenu = false">Download</a>
+        <a href="#about" class="block text-gray-600 hover:text-blue-600 transition-colors" @click="mobileMenu = false">About Us</a>
+        <a href="#install" class="block text-gray-600 hover:text-blue-600 transition-colors" @click="mobileMenu = false">Installation</a>
+        <a href="#screenshots" class="block text-gray-600 hover:text-blue-600 transition-colors" @click="mobileMenu = false">Screenshots</a>
+        <a href="#comments" class="block text-gray-600 hover:text-blue-600 transition-colors" @click="mobileMenu = false">Comments</a>
+      </div>
+    </nav>
+  </header>
+
+
+  <section id="download" class="bg-blue-600 text-white py-20" data-aos="zoom-in">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-5xl font-bold mb-6">Get the App Now</h1>
+      <p class="text-xl mb-8">
+        Experience seamless transactions with Arafattelecom - your one-stop solution for data bundles, airtime, TV subscriptions, and bill payments.
+      </p>
+      
+      <a href="release/app/V1/app-release.apk" download class="bg-white text-blue-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-200 transition duration-300">
+        Download APK
+      </a>
+      <p class="mt-4 text-sm">Version 1.0 • 7MB</p>
+    </div>
+  </section>
+
+
+  <section id="about" class="container mx-auto px-4 py-16" data-aos="fade-up">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-4xl font-bold text-gray-800 mb-6 text-center">About Us</h2>
+      <p class="text-gray-600 mb-4">
+        Arafattelecom is a dynamic web and mobile platform where users can easily purchase internet data bundles, VTU airtime, pay electricity bills, and subscribe to TV services.
+      </p>
+      <p class="text-gray-600 mb-4">
+        Our platform is designed with your convenience in mind. We provide a secure, fast, and efficient way to manage your purchases and bill payments while saving you money.
+      </p>
+      <p class="text-gray-600 mb-4">
+        Our services work seamlessly across all devices including Android, iPhone, computers, and modems. Plus, enjoy data rollover when you re-subscribe before your current plan expires.
+      </p>
+      <p class="text-gray-600 font-semibold">
+        Choose Arafattelecom – the best partner for affordable and reliable digital solutions.
+      </p>
+    </div>
+  </section>
+
+
+  <section id="install" class="bg-white py-16" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-6">Installation Instructions</h2>
+      <div class="max-w-2xl mx-auto text-gray-700 text-lg space-y-4">
+        <p>Before installing the APK, please follow these steps to enable installation from unknown sources:</p>
+        <ol class="list-decimal list-inside">
+          <li>Open your device <strong>Settings</strong>.</li>
+          <li>Navigate to <strong>Security</strong> or <strong>Apps &amp; Notifications</strong> (this may vary by device).</li>
+          <li>Find and enable <strong>Install unknown apps</strong> or <strong>Unknown sources</strong> for your browser.</li>
+          <li>Return to this page and tap on the <strong>Download APK</strong> button.</li>
+          <li>Once the download is complete, open the file and follow the on-screen prompts to install the app.</li>
+        </ol>
+        <p>If you encounter any issues during installation, ensure that your device settings allow installations from this source or consult your device's manual for troubleshooting tips.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="screenshots" class="bg-gray-50 py-16" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">App Screenshots</h2>
+      
+      <div x-data="carousel()" x-init="init()" class="relative overflow-hidden">
+        <div class="flex transition-transform duration-700" :style="`transform: translateX(-${current * 100}%);`">
+          <template x-for="i in total" :key="i">
+            <div class="w-full flex-shrink-0 px-2">
+              
+              <img :src="`screen/${i}.jpg`" alt="Screenshot" class="w-full h-auto rounded-lg shadow-lg">
+            </div>
+          </template>
+        </div>
+        
+        <button @click="prev" class="absolute left-4 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <button @click="next" class="absolute right-4 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white p-3 rounded-full hover:bg-blue-700 transition">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="comments" class="container mx-auto px-4 py-16" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">User Comments</h2>
+    <div class="grid md:grid-cols-2 gap-8">
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-right">
+        <p class="text-gray-700 mb-2">
+          "This app has completely transformed the way I manage my data bundles. Fast, reliable, and super easy to use!"
+        </p>
+        <div class="text-gray-500 text-sm">- Emeka Okafor</div>
+      </div>
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-left">
+        <p class="text-gray-700 mb-2">
+          "Arafattelecom is my go-to for airtime and bill payments. The interface is smooth and very intuitive."
+        </p>
+        <div class="text-gray-500 text-sm">- Ngozi Adeyemi</div>
+      </div> 
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-right">
+        <p class="text-gray-700 mb-2">
+          "Installation was a breeze after following the instructions. I highly recommend this app to everyone."
+        </p>
+        <div class="text-gray-500 text-sm">- Ifeanyi Obi</div>
+      </div> 
+      
+      <div class="bg-white p-6 rounded-lg shadow-lg" data-aos="fade-left">
+        <p class="text-gray-700 mb-2">
+          "Affordable, efficient, and reliable. Arafattelecom has made my life so much easier."
+        </p>
+        <div class="text-gray-500 text-sm">- Chinwe Eze</div>
+      </div>
+    </div>
+  </section>
+
+<footer class="bg-white shadow py-6">
+  <div class="container mx-auto px-4 text-center text-gray-600">
+    <p>&copy; 2025 Arafattelecom. All rights reserved.</p>
+    <p class="mt-2">Website created by <span class="font-semibold text-blue-600">Akorede Ogunsola with</span> 💜</p>
+  </div>
+</footer>
+
+  <script>
+    function carousel() {
+      return {
+        current: 0,
+        total: 7,
+        interval: null,
+        init() {
+          this.interval = setInterval(() => { this.next(); }, 3000);
+        },
+        next() {
+          this.current = (this.current + 1) % this.total;
+        },
+        prev() {
+          this.current = (this.current - 1 + this.total) % this.total;
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
